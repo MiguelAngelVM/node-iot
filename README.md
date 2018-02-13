@@ -7,6 +7,6 @@
 
 #Se implementara con un enfoque de Real Time utilizando ECMAScript 2016 y postgres como base de datos 
 
+- Se implementa la creacion y configuración de la base de datos utilizando modelos
 
-# - Se implementa la creacion y configuración de la base de datos utilizando modelos
-# - Se utilizan script definidos en el package.json
+- Se utilizan script definidos en el package.json
