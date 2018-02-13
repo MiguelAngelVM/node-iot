@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/miguelangelvm/node-iot#readme",
   "devDependencies": {
+    "ava": "^0.25.0",
     "standard": "^10.0.3"
   },
   "dependencies": {
