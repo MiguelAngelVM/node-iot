@@ -1,9 +1,20 @@
 'use strict'
 
 const debug = require('debug')('iot-DB:db:setup')
+const inquirer = require('inquirer')
+const chalk = require('chalk')
 const db = require('./')
 
+const prompt = inquirer.createPromptModule()
 async function setup () {
+  const answer = await prompt([{
+      type: 'confirm', 
+      name: 'setup',
+      message: 'Destruiras la db, estas seguro?'
+  }])
+  if(!answer.setup){
+      return console.log('Continuemos :)')
+  }
   const config = {
     database: process.env.DB_NAME || 'iotdb',
     username: process.env.DB_USER || 'miguel',
