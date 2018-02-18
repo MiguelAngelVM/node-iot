@@ -7,7 +7,7 @@ const proxyquire = require('proxyquire')
 let config = {
   logging () {}
 }
-
+ 
 let MetricStub = {
   belongsTo: sinon.spy()
 }
