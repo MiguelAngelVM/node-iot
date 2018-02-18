@@ -4,7 +4,7 @@
   "description": "Simple iot",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=iot-DB:* ava tests/ --verbose",
+    "test": "DEBUG=iot-DB:* nyc --reporter=lcov ava tests/ --verbose",
     "setup": "DEBUG=iot-DB:* node setup.js",
     "lint": "standard"
   },
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/miguelangelvm/node-iot#readme",
   "devDependencies": {
     "ava": "^0.25.0",
+    "nyc": "^11.4.1",
+    "proxyquire": "^1.8.0",
     "sqlite3": "^3.1.13",
     "standard": "^10.0.3"
   },
@@ -31,7 +33,8 @@
     "inquirer": "^5.1.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.33.3"
+    "sequelize": "^4.33.3",
+    "sinon": "^4.3.0"
   },
   "directories": {
     "lib": "lib"
